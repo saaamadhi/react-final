@@ -1,0 +1,24 @@
+header {
+  padding-top: 1em;
+  text-align: center;
+}
+
+.game-name {
+  text-transform: uppercase;
+}
+
+.welcomeForm {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 60vw);
+}
+
+.greeting {
+  text-align: center;
+}
+
+.inputWrapp{
+  margin: 1rem 0;
+}

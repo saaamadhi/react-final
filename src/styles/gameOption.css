@@ -1,0 +1,25 @@
+
+.rules-logo {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+  
+.rules-wrap {
+    margin: 1rem 0;
+    border: 1px solid #000;
+    padding: 0.5rem;
+}
+  
+.cardShirtBtn__wrapper .mediumBtn{
+    margin: 0 1rem;
+}
+  
+.difficultySelector {
+    margin: 0.5rem 0;
+}
+
+.cardShirt {
+    margin: 0 1rem;
+}

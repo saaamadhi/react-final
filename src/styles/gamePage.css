@@ -1,0 +1,110 @@
+header {
+    display: flex;
+    text-align: center;
+    background: #eee;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.profileImg {
+    width: calc(2.5rem + 1vw);
+    height: calc(2.5rem + 1vw);
+}
+
+.game-name {
+    text-transform: uppercase;
+}
+
+.countersWrap {
+    margin: 0.7rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.cardWrapp {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    background: lightblue;
+}
+
+.card {
+    position: relative;
+    width: calc(2.5rem + 1.5vw);
+    height: calc(2.5rem + 1.5vw);
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+}
+
+.back:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #df5ec9;
+    transition: .5s ease;
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #df5ec9;
+    backface-visibility: hidden;
+}
+
+.front {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #eee99f;
+    backface-visibility: hidden;
+    transform: rotateY( 180deg );
+}
+
+.card.flipped{
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.img-front {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.restartBtn {
+    background: #d34f65;
+    color: #fff;
+    font-weight: bold;
+}
+
+.againBtn {
+    background: #22e071;
+    color: #fff;
+    font-weight: bold;
+}
+
+.restartBtn:hover {
+    background: #f08e9f;
+    color: #fff;
+}
+
+.againBtn:hover {
+    background: #8ff8bb;
+    color: #fff;
+}

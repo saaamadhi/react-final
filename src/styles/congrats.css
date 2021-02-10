@@ -1,0 +1,38 @@
+.wrapp-congrats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vw;
+    background: url(../images/backCongrats.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.endSlogan {
+    font-size: 40px;
+    font-style: oblique;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.resultMessage {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.score {
+    font-weight: bold;
+}
+
+.btn-congrats {
+    text-transform: capitalize;
+}
+
+.tabs-congrats {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0.5rem;
+}
+
+.first-btn {
+    margin-right: 0.5rem;
+}

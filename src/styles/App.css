@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  background-size: cover;
+
+}
+
+.profileImg {
+  width: calc(2.5rem + 1vw);
+  height: calc(2.5rem + 1vw);
+}
