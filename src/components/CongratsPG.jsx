@@ -23,7 +23,7 @@ export default function CongratulationPage() {
             uTime: result.time
         }
         recordsArr.push(scoreItem);
-        localStorage.setItem('scoreInfo', recordsArr);
+        localStorage.setItem('scoreInfo', JSON.stringify(recordsArr));
         history.push('/records');
     }
 
@@ -40,7 +40,7 @@ export default function CongratulationPage() {
                     <Button type='default' onClick={handlerNewGame} className="btn-congrats">One more game</Button>
                 </div>
                 &nbsp;
-                <div>
+                <div className="second-btn">
                     <Button type='default' onClick={handlerRecords} className="btn-congrats">Show records</Button>
                 </div>
             </div>

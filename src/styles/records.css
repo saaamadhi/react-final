@@ -1,0 +1,28 @@
+.wrapp-scores{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.scores-header {
+    padding-top: 1rem;
+    font-style: italic;
+}
+
+.headers-info{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #000;
+}
+
+.wrap-userData {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap-user {
+    display: flex;
+    justify-content: space-around;
+}

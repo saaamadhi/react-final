@@ -95,7 +95,9 @@ export default function GamePage() {
         }
         if(openCard.length === 2) setTimeout(() => {
             setOpenCard([]);
-            cardEl.current.classList.remove('disabled');
+            if(cardEl.current !== null){
+                cardEl.current.classList.remove('disabled');
+            }
         }, 1000)
     }, [openCard])
 
