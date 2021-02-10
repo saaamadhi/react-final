@@ -1,15 +1,22 @@
-
+.label-diff,
+.label-shirt {
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .rules-logo {
-    margin: 0;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
 }
   
 .rules-wrap {
+    color: #ffffff;
     margin: 1rem 0;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     padding: 0.5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4));
 }
   
 .cardShirtBtn__wrapper .mediumBtn{

@@ -17,7 +17,7 @@ export default function GameOptions() {
     return (
         <>
             <div className='difficultySelector'>
-                <p>Difficulty:</p>
+                <p className="label-diff">Difficulty:</p>
                 <Select defaultValue='difficult' onChange={(e) => dispatch(diffLevels(e))}>
                     {difficultyLevels.map((level)=>{
                         return(
@@ -28,7 +28,7 @@ export default function GameOptions() {
             </div>
 
             <div>
-                <p>Select card shirt:</p>
+                <p className="label-shirt">Select card shirt:</p>
                 <div className='cardShirtBtn__wrapper'>
                     {cardShirts.map((shirt, index)=>{
                         return(

@@ -15,7 +15,7 @@ export default function UserProfile() {
         <div className="wrappProfile">
             <header>
                 <span className='game-name'>Mmg</span>
-                <Link to="/welcome">Go Back</Link>
+                <Link to="/welcome" className="goback-link">Go Back</Link>
             </header>
 
             <h1 className="greetingProfile">Nice to see you, {userData.userName}!</h1>

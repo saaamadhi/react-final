@@ -8,8 +8,8 @@
 
 .wrapper {
   height: 100vh;
+  background: url(../images/backWelcome.jpg) no-repeat top center;
   background-size: cover;
-
 }
 
 .profileImg {

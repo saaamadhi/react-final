@@ -1,5 +1,13 @@
 .wrappProfile {
     height: 100vh;
+    background: url(../images/backProfile.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.goback-link {
+    color: #2ccc6e;
+    font-size: 1.4rem;
+    text-decoration: underline;
 }
 
 .greetingProfile {

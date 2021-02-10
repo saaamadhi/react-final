@@ -4,10 +4,10 @@ import {Button} from 'antd';
 import { useHistory } from 'react-router-dom';
 
 export default function CongratulationPage() {
-    let recordsArr = [];
     const history = useHistory();
     const userData = JSON.parse(localStorage.getItem('userData'));
     const result = JSON.parse(localStorage.getItem('scoreData'));
+    const scoreInfoArr = JSON.parse(localStorage.getItem('scoreInfo'));
     const winPhraze = "Congratulations! You won!";
     const lostPhraze = "Sorry, you lost!"
 
@@ -22,8 +22,14 @@ export default function CongratulationPage() {
             uFlips: result.flips,
             uTime: result.time
         }
-        recordsArr.push(scoreItem);
-        localStorage.setItem('scoreInfo', JSON.stringify(recordsArr));
+        if(scoreInfoArr){
+            scoreInfoArr.push(scoreItem);
+            localStorage.setItem('scoreInfo', JSON.stringify(scoreInfoArr));
+        }else {
+            let recordsArr = [];
+            recordsArr.push(scoreItem);
+            localStorage.setItem('scoreInfo', JSON.stringify(recordsArr));
+        }
         history.push('/records');
     }
 

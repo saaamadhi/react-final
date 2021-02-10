@@ -134,7 +134,7 @@ export default function GamePage() {
     }
 
     return (
-        <div className="wrapper">
+        <div className="wrapper-gamePG">
             <header>
                 <span className='game-name'>Mmg</span>
                 <Link to="/profile">
