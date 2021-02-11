@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/congrats.css';
-import {Button} from 'antd';
 import { useHistory } from 'react-router-dom';
+import {Button} from 'antd';
+import '../styles/congrats.css';
 
 export default function CongratulationPage() {
     const history = useHistory();
@@ -9,7 +9,7 @@ export default function CongratulationPage() {
     const result = JSON.parse(localStorage.getItem('scoreData'));
     const scoreInfoArr = JSON.parse(localStorage.getItem('scoreInfo'));
     const winPhraze = "Congratulations! You won!";
-    const lostPhraze = "Sorry, you lost!"
+    const lostPhraze = "Sorry, you loose!"
 
     function handlerNewGame(){
         history.push('/welcome');

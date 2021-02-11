@@ -10,7 +10,6 @@ laudantium consectetur molestias temporibus veniam similique.
 Minus odit nihil sapiente cupiditate deserunt qui reiciendis pariatur asperiores dolore dignissimos,
 corporis consequatur neque officiis nulla autem, nam accusantium tempore illum!`
 
-
 export {
     difficultyLevels,
     cardShirts,

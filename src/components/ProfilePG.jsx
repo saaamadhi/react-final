@@ -6,6 +6,7 @@ import '../styles/profile.css';
 export default function UserProfile() {
     const history = useHistory();
     const userData = JSON.parse(localStorage.getItem('userData'));
+
     function handlerLogOut(){
         localStorage.removeItem('userData');
         history.push('/welcome');

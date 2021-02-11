@@ -1,15 +1,16 @@
 import React, {useEffect} from 'react';
 import {Redirect, Route, Switch, useHistory} from 'react-router-dom';
-import './styles/App.css';
 import WelcomePage from './components/WelcomePG';
 import UserProfile from './components/ProfilePG';
 import GamePage from './components/GamePG';
 import CongratulationPage from './components/CongratsPG';
 import RecordsPage from './components/RecordsPG';
 import NotFound from './components/NotFoundPG';
+import './styles/App.css';
 
 function App() {
   const history = useHistory();
+  
   useEffect(() => {
       history.push('/welcome')
   },[])

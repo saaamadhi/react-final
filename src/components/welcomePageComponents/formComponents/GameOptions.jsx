@@ -1,14 +1,14 @@
 import React from 'react';
-import {Select} from 'antd';
-import {Button} from 'antd';
-import '../../../styles/gameOption.css';
+import {Select, Button} from 'antd';
 import {difficultyLevels, cardShirts, rulesOfTheGame} from '../../constants';
 import {diffLevels, cardShirtOptions} from '../../../actions/welcomePG';
 import {useDispatch} from 'react-redux';
+import '../../../styles/gameOption.css';
 const {Option} = Select;
 
 export default function GameOptions() {
     const dispatch = useDispatch();
+    
     function handlerBtns(event){
         dispatch(cardShirtOptions(event.target.innerHTML));
         event.target.focus();

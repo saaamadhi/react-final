@@ -1,11 +1,12 @@
 import React from 'react';
-import '../styles/records.css';
-import {Button} from 'antd';
 import { useHistory } from 'react-router-dom';
+import {Button} from 'antd';
+import '../styles/records.css';
 
 export default function RecordsPage() {
     const history = useHistory();
     const scoreInfo = JSON.parse(localStorage.getItem('scoreInfo'));
+
     function handlerClick(){
         history.push('/welcome');
     }

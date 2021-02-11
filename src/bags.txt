@@ -1,2 +1,0 @@
-1. add focus class on cardShirts
-2. bag when restart page storage is empty

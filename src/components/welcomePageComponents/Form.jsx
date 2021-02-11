@@ -1,8 +1,8 @@
 import React, {useState, useRef} from 'react';
 import {useHistory} from 'react-router-dom';
 import GameOptions from './formComponents/GameOptions';
-import '../../styles/welcomePage.css';
 import {Input, Button} from 'antd';
+import '../../styles/welcomePage.css';
 
 export default function Form() {
     const history = useHistory();
@@ -23,7 +23,7 @@ export default function Form() {
                 </div>
                 <div  className='inputWrapp'>
                     <Input ref={email} type='email' placeholder="Email..."  required/>
-                    <div style={{color: 'red'}}>{emailError}</div>
+                    <div className='error-email'>{emailError}</div>
                 </div>
             </div>
         )
@@ -44,7 +44,7 @@ export default function Form() {
                 localStorage.setItem('userData', JSON.stringify(uData));
                 history.push('/game');
             }else {
-                setEmailError('Not valid email!');
+                setEmailError('*Not valid email!');
             }
         }
     }

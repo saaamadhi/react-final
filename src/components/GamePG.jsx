@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import '../styles/gamePage.css';
-import {Button} from 'antd';
 import {useSelector} from 'react-redux';
+import {Button} from 'antd';
+import '../styles/gamePage.css';
 import profileImg from '../images/profile.png';
 
 export default function GamePage() {
@@ -175,5 +175,3 @@ export default function GamePage() {
         </div>
     )
 }
-
-//ref={name} 

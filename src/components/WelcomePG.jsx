@@ -1,8 +1,8 @@
 import React from 'react';
-import '../styles/App.css';
-import Form from './welcomePageComponents/Form';
 import {Link} from 'react-router-dom';
-import profileImg from '../images/profile.png'
+import Form from './welcomePageComponents/Form';
+import profileImg from '../images/profile.png';
+import '../styles/App.css';
 
 export default function WelcomePage() {
   const userData = JSON.parse(localStorage.getItem('userData'));
