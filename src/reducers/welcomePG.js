@@ -14,11 +14,11 @@ const difficultyOption = (state = 'HARD', action) => {
 const shirtOption = (state = '', action) => {    
     switch(action.type){
         case 'CAKES': 
-            return state = [action.type, action.payload];
+            return {actionType: action.type, actionPayload: action.payload};
         case 'ANIMALS': 
-            return state = [action.type, action.payload];
+            return {actionType: action.type, actionPayload: action.payload};
         case 'PLANTS': 
-            return state = [action.type, action.payload];
+            return {actionType: action.type, actionPayload: action.payload};
         default: 
             return state;
     }

@@ -1,29 +1,32 @@
 import React, {useState, useRef} from 'react';
 import {useHistory} from 'react-router-dom';
 import GameOptions from './formComponents/GameOptions';
-import {Input, Button} from 'antd';
+import { Button} from 'antd';
 import '../../styles/welcomePage.css';
 
 export default function Form() {
     const history = useHistory();
-    const name = useRef();
-    const lastName = useRef();
-    const email = useRef();
+    const userName = useRef();
+    const userLastName = useRef();
+    const userEmail = useRef();
     const [emailError, setEmailError] = useState('');
     const userData = JSON.parse(localStorage.getItem('userData'));
     
     function UserData() {
         return (
-            <div>
+            <div className="input-wrapper">
                 <div  className='inputWrapp'>
-                    <Input ref={name} type='text' placeholder="Name..." required/>
+                    <input className="input-c-ud" ref={userName} type='text' placeholder="Name..." name="name" required/>
+                    <label htmlFor="name" className="input-label">Name</label>
                 </div>
                 <div  className='inputWrapp'>
-                    <Input ref={lastName} type='text' placeholder="Last Name..." required/>
+                    <input className="input-c-ud" ref={userLastName} type='text' placeholder="Last Name..." name="lastname" required/>
+                    <label htmlFor="lastname" className="input-label">Last name</label>
                 </div>
                 <div  className='inputWrapp'>
-                    <Input ref={email} type='email' placeholder="Email..."  required/>
-                    <div className='error-email'>{emailError}</div>
+                    <input className="input-c-ud" ref={userEmail} type='email' placeholder="Email..." name="email" required/>
+                    <label htmlFor="email" className="input-label">Email</label>
+                    <div className='error-input'>{emailError}</div>
                 </div>
             </div>
         )
@@ -33,17 +36,17 @@ export default function Form() {
         if(userData){
             history.push('/game');
         }else {
-            const isValid = validEmail(email.current.state.value);
-            if(isValid){
+            const isValidEmail = validEmail(userEmail.current.value);
+            if(isValidEmail){
                 setEmailError('')
                 const uData = { 
-                    userName: name.current.state.value,
-                    userLastName: lastName.current.state.value,
-                    userEmail: email.current.state.value
+                    userName: userName.current.value,
+                    userLastName: userLastName.current.value,
+                    userEmail: userEmail.current.value
                 };
                 localStorage.setItem('userData', JSON.stringify(uData));
                 history.push('/game');
-            }else {
+            }else{
                 setEmailError('*Not valid email!');
             }
         }
@@ -56,7 +59,8 @@ export default function Form() {
     }
 
     return (
-        <>
+        <>   
+            <p className="start-game-text">*Fill fields to start game*</p>
             {userData ? "": <UserData/>}
             <GameOptions/>
             <div>

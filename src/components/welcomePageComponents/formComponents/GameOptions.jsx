@@ -1,6 +1,6 @@
 import React from 'react';
 import {Select, Button} from 'antd';
-import {difficultyLevels, cardShirts, rulesOfTheGame} from '../../constants';
+import {difficultyLevels, cardShirts} from '../../constants';
 import {diffLevels, cardShirtOptions} from '../../../actions/welcomePG';
 import {useDispatch} from 'react-redux';
 import '../../../styles/gameOption.css';
@@ -27,25 +27,20 @@ export default function GameOptions() {
                 </Select>
             </div>
 
-            <div>
+            <div className="card-shirt-wrapp">
                 <p className="label-shirt">Select card shirt:</p>
                 <div className='cardShirtBtn__wrapper'>
                     {cardShirts.map((shirt, index)=>{
                         return(
                             <Button key={index}
-                            type="default"
-                            className='cardShirt'
-                            onClick={(e) => handlerBtns(e)}>
-                                   {shirt}
+                                type="default"
+                                className='cardShirt'
+                                onClick={(e) => handlerBtns(e)}
+                            >{shirt}
                             </Button>
                         )
                     })}
                 </div>
-            </div>
-
-            <div className='rules-wrap'>
-                <p className='rules-logo'>Rules</p>
-                <p>{rulesOfTheGame}</p>
             </div>
         </>
     )

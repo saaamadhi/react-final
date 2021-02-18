@@ -1,9 +1,10 @@
 .wrapp-congrats {
+    color:#fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 10vw;
-    background: url(../images/backCongrats.jpg);
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/backCongrats.jpg);
     background-size: cover;
     height: 100vh;
 }
@@ -23,7 +24,14 @@
     font-weight: bold;
 }
 
-.btn-congrats {
+button.ant-btn.ant-btn-default.btn-congrats {
+    color:#fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(217deg, rgba(221, 132, 233, 0.8), rgba(169, 248, 228, 0) 70.71%),
+    linear-gradient( 127deg, rgba(233, 132, 194, 0.8), rgba(200, 238, 228, 0) 70.71%),
+    linear-gradient( 336deg, rgba(253, 163, 90, 0.8), rgba(129, 223, 198, 0.4) 70.71%);
     text-transform: capitalize;
 }
 

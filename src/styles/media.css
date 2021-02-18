@@ -1,0 +1,16 @@
+@media (max-width:950px) {
+    .wrapper {
+        height: 100%;
+    }
+    .main__container {
+        flex-direction: column;
+    }
+    .welcomeForm{
+        padding-top: 1rem;
+    }
+    .rules-wrap,
+    .welcomeForm {
+        margin: 0 auto;
+        width: 100%;
+    }
+}

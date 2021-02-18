@@ -13,5 +13,5 @@ corporis consequatur neque officiis nulla autem, nam accusantium tempore illum!`
 export {
     difficultyLevels,
     cardShirts,
-    rulesOfTheGame,
+    rulesOfTheGame
 };

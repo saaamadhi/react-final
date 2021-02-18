@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import {useSelector} from 'react-redux';
-import {Button} from 'antd';
 import '../styles/gamePage.css';
 import profileImg from '../images/profile.png';
 
@@ -19,9 +18,9 @@ export default function GamePage() {
     let difficultyLevel = useSelector(state => state.difficultyOption);
     let easy = [], mid = [], hard = [];
     if(shirtOption){
-        shirtOption[1][2].forEach(el => easy.push(el));
-        shirtOption[1][1].forEach(el => mid.push(el));
-        shirtOption[1][0].forEach(el => hard.push(el));
+        shirtOption.actionPayload[2].forEach(el => easy.push(el));
+        shirtOption.actionPayload[1].forEach(el => mid.push(el));
+        shirtOption.actionPayload[0].forEach(el => hard.push(el));
     } else {
         history.push('/welcome')
     }
@@ -69,7 +68,7 @@ export default function GamePage() {
     useEffect(() => {
         const timerInterval= setInterval(() => {
             setTimeCount(timeCount + 1);
-        }, 1000);
+        }, 650);
 
         if(timeCount === 5000){
             let winning = false;
@@ -136,7 +135,10 @@ export default function GamePage() {
     return (
         <div className="wrapper-gamePG">
             <header>
-                <span className='game-name'>Mmg</span>
+                <div className='logotype'>
+                  <div className='header-logo-img'></div>
+                  <span className='game-name'>Mmg</span>
+                </div>
                 <Link to="/profile">
                     <img src={profileImg} alt="profile" className="profileImg"/>
                 </Link>
@@ -169,8 +171,8 @@ export default function GamePage() {
             </div>
 
             <div className="tabs">
-                <Button type="default" className="restartBtn" onClick={restartHandle} >Restart</Button>
-                <Button type="default" className="againBtn" onClick={newGameHandle}>New game</Button>
+                <button className="restartBtn" onClick={restartHandle}>Restart</button>
+                <button className="againBtn" onClick={newGameHandle}>New game</button>
             </div>
         </div>
     )
