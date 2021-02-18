@@ -8,11 +8,11 @@ export const diffLevels = (option) => {
             return {
                 type: 'EASY',
             }
-        case 'MIDIUM':
+        case 'MEDIUM':
             return {
-                type: 'MIDIUM'
+                type: 'MEDIUM'
             }
-        case 'DIFFICULT':
+        case 'HARD':
             return {
                 type: 'HARD'
             }

@@ -2,8 +2,8 @@ const difficultyOption = (state = 'HARD', action) => {
     switch(action.type){
         case 'EASY': 
             return state = 'EASY';
-        case 'MIDIUM': 
-            return state = 'MIDIUM';
+        case 'MEDIUM': 
+            return state = 'MEDIUM';
         case 'HARD': 
             return state = 'HARD';
         default: 

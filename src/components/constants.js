@@ -1,4 +1,4 @@
-const difficultyLevels = ['difficult', 'midium', 'easy'];
+const difficultyLevels = ['hard', 'medium', 'easy'];
 const cardShirts = ['cakes', 'plants', 'animals'];
 
 const rulesOfTheGame = `Lorem, ipsum dolor sit amet consectetur adipisicing elit.

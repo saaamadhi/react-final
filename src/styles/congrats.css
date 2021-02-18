@@ -9,15 +9,10 @@
     height: 100vh;
 }
 
-.endSlogan {
+.resultMessage {
     font-size: 40px;
     font-style: oblique;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.resultMessage {
-    font-size: 25px;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .score {

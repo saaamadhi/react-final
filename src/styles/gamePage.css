@@ -7,7 +7,7 @@ header {
 }
 
 .wrapper-gamePG {
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(0.25turn, rgb(223, 173, 230), #ebf8e1, #84dae5);
     background-size: cover;
 }
@@ -36,7 +36,7 @@ header {
 
 .cardWrapp {
     display: grid;
-    gap: 10px;
+    gap: 6px;
     justify-content: center;
 }
 

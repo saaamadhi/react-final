@@ -14,13 +14,13 @@ export default function GamePage() {
     const [flipCount, setFlipCount] = useState(0);
     const [matchedPair, setMatchedPair] = useState([]);
     const [amountOfcards, setAmountOfcards] = useState(0);
-    let shirtOption = useSelector(state => state.shirtOption);
+    let shirtOptions = useSelector(state => state.shirtOption);
     let difficultyLevel = useSelector(state => state.difficultyOption);
-    let easy = [], mid = [], hard = [];
-    if(shirtOption){
-        shirtOption.actionPayload[2].forEach(el => easy.push(el));
-        shirtOption.actionPayload[1].forEach(el => mid.push(el));
-        shirtOption.actionPayload[0].forEach(el => hard.push(el));
+    let easy = [], med = [], hard = [];
+    if(shirtOptions){
+        shirtOptions.actionPayload[2].forEach(el => easy.push(el));
+        shirtOptions.actionPayload[1].forEach(el => med.push(el));
+        shirtOptions.actionPayload[0].forEach(el => hard.push(el));
     } else {
         history.push('/welcome')
     }
@@ -49,10 +49,10 @@ export default function GamePage() {
                 setAmountOfcards(4);
                 setCardPairs(shuffleCards([...easy, ...easy]));
                 break;
-            case 'midium':
+            case 'medium':
                 lenOfImgArr.current = 12;
                 setAmountOfcards(6);
-                setCardPairs(shuffleCards([...mid, ...mid]));
+                setCardPairs(shuffleCards([...med, ...med]));
                 break;
             case 'hard':
                 lenOfImgArr.current = 16;
@@ -60,7 +60,6 @@ export default function GamePage() {
                 setCardPairs(shuffleCards([...hard, ...hard]));
                 break;
             default: 
-                console.log('here')
                 break;
         }
     }, [])
@@ -124,7 +123,8 @@ export default function GamePage() {
     }, [matchedPair])
 
     function newGameHandle(){
-        history.push('/welcome')
+        //clear redux storage
+        history.push('/welcome');
     }
 
     function restartHandle(){

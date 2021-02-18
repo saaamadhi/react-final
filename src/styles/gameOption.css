@@ -27,14 +27,31 @@ span.ant-select-arrow {
     margin-right: 1rem;
 }
 
-.cardShirt {
-    margin: 0 1rem;
+.ant-select {
+    width: 5rem;
 }
 
-button.ant-btn-default {
-    padding: calc(0.9rem + 0.6vw);
+.cardShirt {
+    outline: none;
+    border: 1px solid #fff;
+    padding: 0.8rem 1.5rem;
+    margin: 0 1rem;
+    border-radius: 2px;
     color: transparent;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cardShirt:hover {
+    border: 1px solid #81dcf8;
+    color: #81dcf8;
+    transition: 2s;
+}
+
+.cardShirt:nth-child(1):hover,
+.cardShirt:nth-child(2):hover,
+.cardShirt:nth-child(3):hover{
+    background: #ffffff;
+    transition: 1s;
 }
 
 .cardShirt:nth-child(1){

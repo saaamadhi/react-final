@@ -1,5 +1,5 @@
 import React from 'react';
-import {Select, Button} from 'antd';
+import {Select} from 'antd';
 import {difficultyLevels, cardShirts} from '../../constants';
 import {diffLevels, cardShirtOptions} from '../../../actions/welcomePG';
 import {useDispatch} from 'react-redux';
@@ -9,16 +9,20 @@ const {Option} = Select;
 export default function GameOptions() {
     const dispatch = useDispatch();
     
-    function handlerBtns(event){
-        dispatch(cardShirtOptions(event.target.innerHTML));
-        event.target.focus();
+    function handlerBtns(value){
+        dispatch(cardShirtOptions(value));
+    }
+
+    function handlerSelect(value){
+        console.log(value);
+        dispatch(diffLevels(value));
     }
 
     return (
         <>
             <div className='difficultySelector'>
                 <p className="label-diff">Difficulty:</p>
-                <Select defaultValue='difficult' onChange={(e) => dispatch(diffLevels(e))}>
+                <Select defaultValue='hard' onChange={(e) => handlerSelect(e)}>
                     {difficultyLevels.map((level)=>{
                         return(
                             <Option key={level}>{level}</Option>
@@ -32,12 +36,13 @@ export default function GameOptions() {
                 <div className='cardShirtBtn__wrapper'>
                     {cardShirts.map((shirt, index)=>{
                         return(
-                            <Button key={index}
-                                type="default"
+                            <button key={index}
+                                type="button"
                                 className='cardShirt'
-                                onClick={(e) => handlerBtns(e)}
+                                value={shirt}
+                                onClick={(e) => handlerBtns(e.target.value)}
                             >{shirt}
-                            </Button>
+                            </button>
                         )
                     })}
                 </div>

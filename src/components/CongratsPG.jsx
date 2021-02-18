@@ -8,8 +8,8 @@ export default function CongratulationPage() {
     const userData = JSON.parse(localStorage.getItem('userData'));
     const result = JSON.parse(localStorage.getItem('scoreData'));
     const scoreInfoArr = JSON.parse(localStorage.getItem('scoreInfo'));
-    const winPhraze = "Congratulations! You won!";
-    const lostPhraze = "Sorry, you loose!"
+    const winPhraze = "Congratulations!You won!";
+    const lostPhraze = "Game over!Sorry, you loose!"
 
     function handlerNewGame(){
         history.push('/welcome');
@@ -35,7 +35,6 @@ export default function CongratulationPage() {
 
     return (
         <div className="wrapp-congrats">
-            <p className="endSlogan">Game over!</p>
             <p className="resultMessage">{result.won ? winPhraze : lostPhraze}</p>
             <div className="score">
                 <p>Flips:&nbsp;{result.flips}</p>

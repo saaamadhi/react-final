@@ -9,6 +9,9 @@
     width: calc(2em + 1vw);
     height: calc(2em + 1vw);
 }
+.init-info-about-user {
+    text-align: left;
+}
 
 .main-info-profile{
     display: flex;
@@ -32,9 +35,7 @@
 }
 
 .sectionProfile {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10vw;
+    text-align: right;
 }
 
 .labelInformationProfile {

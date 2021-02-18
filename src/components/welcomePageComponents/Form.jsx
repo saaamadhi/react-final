@@ -16,15 +16,15 @@ export default function Form() {
         return (
             <div className="input-wrapper">
                 <div  className='inputWrapp'>
-                    <input className="input-c-ud" ref={userName} type='text' placeholder="Name..." name="name" required/>
+                    <input className="input-c-ud" ref={userName} type='text' placeholder="Name..." autoComplete='off' name="name" required/>
                     <label htmlFor="name" className="input-label">Name</label>
                 </div>
                 <div  className='inputWrapp'>
-                    <input className="input-c-ud" ref={userLastName} type='text' placeholder="Last Name..." name="lastname" required/>
+                    <input className="input-c-ud" ref={userLastName} type='text' placeholder="Last Name..." autoComplete='off' name="lastname" required/>
                     <label htmlFor="lastname" className="input-label">Last name</label>
                 </div>
                 <div  className='inputWrapp'>
-                    <input className="input-c-ud" ref={userEmail} type='email' placeholder="Email..." name="email" required/>
+                    <input className="input-c-ud" ref={userEmail} type='email' placeholder="Email..." autoComplete='off' name="email" required/>
                     <label htmlFor="email" className="input-label">Email</label>
                     <div className='error-input'>{emailError}</div>
                 </div>
